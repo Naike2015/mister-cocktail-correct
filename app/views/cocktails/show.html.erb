@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @cocktail.name %>
+</p>
+
+<p>
+  <strong>Doses:</strong>
+  <ul>
+  <%= @cocktail.doses.map do |l| %>
+  <li><%= "#{c.description}"%></li>
+  <% end %>
+  </ul>
+</p>
+
+<%= link_to 'Back', cocktails_path(@cocktail) %>
+<%= link_to 'Add Cocktail', cocktails_new_path(@cocktails)%>
